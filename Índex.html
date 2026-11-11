@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PS4 Bluetooth Manager</title>
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;background:#080e1c;color:white;
+ font-family:Arial,sans-serif;padding:20px;
+}
+header{text-align:center;padding:25px 0}
+h1{color:#42a5ff;font-size:25px}
+.subtitle{color:#91a6c5}
+.panel{
+ background:#121e33;border:1px solid #243b5d;
+ border-radius:14px;padding:18px;margin:14px 0;
+}
+h2{font-size:17px;color:#70baff}
+button{
+ background:#087cf0;color:white;border:0;
+ border-radius:9px;padding:14px;width:100%;
+ font-size:15px;font-weight:bold;margin-top:10px;
+}
+.device{
+ background:#1a2b45;padding:13px;
+ border-radius:9px;margin-top:10px;
+}
+.status{color:#50df9a;font-size:13px}
+.muted{color:#91a6c5;font-size:13px}
+footer{text-align:center;color:#71839e;margin:30px 0}
+</style>
+</head>
+<body>
+<header>
+ <h1>🔵 PS4 Bluetooth Manager</h1>
+ <div class="subtitle">Gerenciador Bluetooth Homebrew</div>
+ <p class="status">INTERFACE INICIAL</p>
+</header>
+
+<div class="panel">
+ <h2>📡 Bluetooth Scanner</h2>
+ <p class="muted">Busca de dispositivos próximos</p>
+ <button onclick="scan()">PROCURAR DISPOSITIVOS</button>
+ <div id="scanResult" class="device">
+ Aguardando busca...
+ </div>
+</div>
+
+<div class="panel">
+ <h2>🎮 Controles</h2>
+ <div class="device">
+ DualShock 4
+ <p class="muted">Aguardando informações do console</p>
+ <div id="battery">Bateria: indisponível</div>
+ </div>
+</div>
+
+<div class="panel">
+ <h2>🔗 Dispositivos pareados</h2>
+ <div id="paired" class="muted">
+ Nenhum dado recebido do console.
+ </div>
+</div>
+
+<div class="panel">
+ <h2>🎧 Fones Bluetooth</h2>
+ <div class="muted">
+ Aguardando integração com o sistema PS4.
+ </div>
+</div>
+
+<div class="panel">
+ <h2>🔋 Monitor de bateria</h2>
+ <div class="muted">
+ A leitura real depende da integração Homebrew.
+ </div>
+</div>
+
+<footer>
+ PS4 Bluetooth Manager<br>
+ Projeto Homebrew independente
+</footer>
+
+<script>
+function scan(){
+ document.getElementById("scanResult").innerHTML =
+ "Interface preparada. A busca Bluetooth real precisa ser conectada ao serviço nativo do PS4.";
+}
+</script>
+</body>
+</html>
